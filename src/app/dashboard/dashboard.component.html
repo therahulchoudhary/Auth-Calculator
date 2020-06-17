@@ -1,0 +1,43 @@
+<div>
+    <div class="ui pointing secondary menu">
+        <a class="active item">Home</a>
+        <div class="right menu"><a class="item" (click)="logout()">Logout</a></div>
+    </div>
+</div>
+<div class="ui" style="padding:40px 0;width: 30%;margin:auto;">
+    <div class="ui info message red" *ngIf="errorMessage">
+        {{errorMessage}}
+    </div>
+    <div class="ui two column grid" style="width:90%;margin:auto;">
+        <div class="column">
+            <div class="ui input">
+                <input type="text" #num1 placeholder="Enter First Number" required/>
+            </div>
+            <div class="ui input">
+                <select #optype style="width: 183px;padding:9.5px 14px;border-radius: 4px;margin:10px 0;" (change)="changeOption()">
+                    <option value="add">ADD</option>
+                    <option value="subt">SUB</option>
+                    <option value="mul">MUL</option>
+                    <option value="div">DIV</option>
+                    <option value="pow">POW</option>
+                    <option value="logxy">LOGXY</option>
+                    <option value="log">LOG</option>
+                    <option value="log10">LOG10</option>
+                    <option value="fact">FACT</option>
+                    <option value="percent">PERCENT</option>
+                    <option value="sine">SIN</option>
+                    <option value="cosine">COSINE</option>
+                </select>
+            </div>
+        </div>
+        <div class="column">
+            <div class="ui input">
+                <input type="number" #num2 placeholder="Enter Second Number" [disabled]="disableField"/>
+            </div>
+            <button class="ui button" style="margin:10px 0;width:183px;" (click)="calculate()">Calculate</button>
+        </div>
+    </div>
+    <div class="ui info message green" *ngIf="output">
+        {{output}}
+    </div>
+</div>

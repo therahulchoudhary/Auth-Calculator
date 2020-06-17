@@ -1,0 +1,35 @@
+<ol role="list" class="ui list">
+    <li role="listitem" class="">First of all click on Add New User button to add a new user.</li>
+    <li role="listitem" class="">
+        Cretendial for dummy user is
+        <ol class="">
+        <li role="listitem" class="">email : testuser</li>
+        <li role="listitem" class="">Password : test</li>
+        </ol>
+    </li>
+    <li role="listitem" class="">Thanks & enjoy the calculator</li>
+</ol>
+<div class="ui center aligned middle aligned grid" style="height: 100vh;">
+    <div class="column" style="max-width: 450px;">
+        <h2 class="ui teal center aligned header">Log-in to your account</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
+            <div class="ui stacked segment">
+                <div class="field">
+                    <div class="ui fluid left icon input">
+                        <input placeholder="E-mail address" type="text" formControlName="email"><i aria-hidden="true" class="user icon" ></i>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui fluid left icon input">
+                        <input placeholder="Password" type="password" formControlName="password"><i aria-hidden="true" class="lock icon" ></i>
+                    </div>
+                </div>
+                {{error}}
+                <input class="ui teal large fluid button" type="submit" value="submit">
+            </div>
+        </form>
+        <div class="ui message" (click)="addUser()">
+            Add New User
+        </div>
+    </div>
+</div>

@@ -7,8 +7,7 @@ export const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
     'Accept': 'application/json',
-    'cookie-token':'dafb7fb38ufbui9wess',
-    'Access-Control-Max-Age':'600',
+    'cookie-token':'dafb7fb38ufbui9wess'
     // "Access-Control-Allow-Methods": "GET, POST, DELETE, PUT",
     // 'Access-Control-Allow-Origin': '*'
   })
